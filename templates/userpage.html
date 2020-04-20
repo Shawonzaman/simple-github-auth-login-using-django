@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+</head>
+<body>
+<h1> Welcome to my demo project</h1>
+<hr>
+{% if user.is_authenticated %}
+    <h2>Hello {{ user.username }}</h2>
+    <br>
+    <hr>
+    <a href="userpage/logout">Logout</a>
+{% else %}
+    Sorry
+{% endif %}
+
+<a href="{% url 'social:begin' 'github' %}">
+        <button type="button" name="button">My Github</button>
+    </a>
+</body>
+</html>

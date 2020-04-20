@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+</head>
+<body>
+<h1> Welcome to my demo project</h1>
+<hr>
+
+    <h2>Hello {{ user }}</h2>
+    <br>
+    <table border="1px" align="center">
+        {% for repo in repos %}
+        <tr>
+            <td><a href="userpage/repos/?repo={{ repo }}">{{ repo }}</a></td>
+{#            <td><button>Save</button></td>#}
+        </tr>
+        {% endfor %}
+    </table>
+
+    <hr>
+    <a href="userpage/logout">Logout</a>
+
+
+</body>
+</html>
